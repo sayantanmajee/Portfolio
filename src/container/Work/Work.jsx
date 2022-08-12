@@ -61,7 +61,8 @@ function Work() {
 
       <motion.div
         animate={animateCard}
-        transition={{ duration: 0.5, delayChildren: 0.5 }}
+        whileInView={{ opacity: [0, 1] }}
+        transition={{ duration: 0.8 }}
         className="app__work-portfolio"
       >
         {filterWork.map((work, index) => {
