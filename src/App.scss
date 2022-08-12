@@ -1,0 +1,259 @@
+@import './index';
+
+.app {
+  background-color: var(--primary-color);
+  font-family: var(--font-base);
+}
+
+.app__whitebg {
+  background-color: var(--white-color);
+}
+
+.app__primarybg {
+  background-color: var(--primary-color);
+}
+
+.app__container {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 6.5rem;
+  display: flex;
+  justify-content: flex-start;
+  // flex-direction: row;
+  // @media screen and (max-width: 900px) {
+  //   // height: auto;
+  // }
+
+}
+
+.app__wrapper {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+  // margin-top: 2rem;
+  // padding: 5rem 0;
+
+  @media screen and (max-width: 450px) {
+    // padding: 4rem 1rem 2rem;
+  }
+}
+
+
+.app__horizontal-bar {
+  margin: 10px;
+  height: 6px;
+  width: 35px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+}
+
+.app__flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.head-text {
+  font-size: 2.75rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--black-color);
+  text-transform: capitalize;
+
+  span {
+    color: var(--secondary-color);
+  }
+
+  @media screen and (min-width: 2000px) {
+    font-size: 4rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 2rem;
+  }
+}
+
+.p-text {
+  font-size: 1.1rem;
+  text-align: left;
+  color: var(--gray-color);
+  line-height: 1.5;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem;
+  }
+  @media screen and (max-width: 900px) {
+    font-size: 1rem;
+  }
+}
+
+.bold-text {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--black-color);
+  text-align: left;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    font-size: 1.1rem;
+  }
+}
+
+.app__social {
+  position: fixed;
+  left: 0;
+  top: 43%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(231, 231, 231);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 5px 5px 10px rgb(194, 194, 194);
+  
+
+  padding: 0.5rem;
+
+  a {
+    display: flex;
+  }
+
+  div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    margin: 0.25rem 0;
+    border: 1px solid var(--lightGray-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.3s ease-in-out;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      color: var(--gray-color);
+    }
+
+    &:hover {
+      background-color: var(--secondary-color);
+      border-color: var(--secondary-color);
+      transform: scale(1.2);
+
+      svg {
+        color: var(--white-color);
+      }
+    }
+
+    @media screen and (min-width: 2000px) {
+      width: 70px;
+      height: 70px;
+
+      margin: 0.5rem 0;
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    @media screen and (max-width: 900px) {
+      width: 35px;
+      height: 35px;
+
+      margin: 0.3rem 0;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+.app__navigation {
+  position: fixed;
+  left: 95%;
+  top: 48%;
+  display: flex;
+  flex-direction: column;
+  // display: flex;
+  // // position: fixed;
+  // justify-content: center;
+  // align-items: center;
+  // flex-direction: column;
+  
+
+  // padding: 1rem;
+
+  .app__navigation-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #cbcbcb;
+    margin: 0.5rem;
+
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: var(--secondary-color);
+    }
+
+    @media screen and (min-width: 2000px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 740px) {
+
+  .app__navigation,
+  .app__social {
+    display: none;
+  }
+
+  .copyright {
+    padding: 2rem;
+  }
+}
+
+
+.generic_btn {
+  // background-color: rgba(153,153,153,.2);
+  background-color: #f7e3b7;
+  // background-image: linear-gradient(to right, var(--secondary-color) 0%, #bfbaff  51%, var(--secondary-color)  100%);
+  margin-top: 30px;
+  padding: 15px 45px;
+  position: relative;
+  top: 50px;
+  border: none;
+  text-align: center;
+  font-size: large;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.2s;
+  background-size: 200% auto;
+  color: black;
+  box-shadow: 5px 5px 10px rgb(194, 194, 194);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.generic_btn:hover {
+  background-color: var(--secondary-color);
+  // background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 8px 8px 10px rgb(115, 160, 255);
+  // transform: scale(1.06);
+}
