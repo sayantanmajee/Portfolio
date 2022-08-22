@@ -61,17 +61,18 @@ function Work() {
 
       <motion.div
         animate={animateCard}
-        whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 0.8 }}
+        // whileInView={{ opacity: [0, 1] }}
+        transition={{ duration: 0.5, delayChildren: 0.6}}
         className="app__work-portfolio"
       >
         {filterWork.map((work, index) => {
           return (
-            <motion.div 
-            whileInView={{opacity: [-1,1]}}
-            transition={{ duration: 0.3 }}
-            className="app__work-item app_flex" 
-            key={index}>
+            <motion.div
+              whileInView={{ opacity: [-1, 1] }}
+              transition={{ duration: 0.3 }}
+              className="app__work-item app_flex"
+              key={index}
+            >
               <div className="app__work-img app__flex">
                 <img src={urlFor(work.imgUrl)} alt={work.name} />
 
