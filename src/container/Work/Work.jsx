@@ -6,21 +6,31 @@ import { urlFor, client } from "../../client";
 import "./Work.scss";
 
 function Work() {
-  const catagory = ["UI/UX", "web app", "Mobile app", "React", "All"];
+  const catagory = ["React", "Clone App", "Frontend", "Commercial" ,"All"];
 
-  // const [catagory, setCatagory] = useState([]);
+  // const [catagory, setCatagory] = useState(["All"]);
   const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
+  const [width, setWidth] = React.useState(window.innerWidth);
+
+  const breakpoints = 900;
 
   useEffect(() => {
+    //updates the "width" state variable when the window size changes
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+
     const query = `*[_type == 'works']`;
     client.fetch(query).then((data) => {
       setWorks(data);
       setFilterWork(data);
     });
+
+    console.log(catagory);
   }, []);
+
+  
 
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
@@ -62,7 +72,7 @@ function Work() {
       <motion.div
         animate={animateCard}
         // whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 0.5, delayChildren: 0.6}}
+        transition={{ duration: 0.5, delayChildren: 0.6 }}
         className="app__work-portfolio"
       >
         {filterWork.map((work, index) => {
@@ -77,7 +87,10 @@ function Work() {
                 <img src={urlFor(work.imgUrl)} alt={work.name} />
 
                 <motion.div
-                  whileHover={{ opacity: [0, 1] }}
+                  whileInView={
+                    width <= breakpoints ? { opacity: 1 } : { opacity: 0 }
+                  }
+                  whileHover={width > breakpoints && { opacity: [0, 1] }}
                   transition={{
                     duration: 0.25,
                     ease: "easeInOut",

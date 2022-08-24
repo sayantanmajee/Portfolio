@@ -10,7 +10,7 @@ function Navbar() {
   return (
     
     <nav className="app__navbar">
-      <a href="/" className="app__navbar-logo">
+      <a href="https://sayantanmajee.netlify.com" target="_blank" rel='noreferrer' className="app__navbar-logo">
         <span>Sayantan Majee</span>
       </a>
       <ul className="app__navbar-links">
