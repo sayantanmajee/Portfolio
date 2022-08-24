@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import ResumeDoc from '../../assets/Resume/Sayantan_majee_resume.pdf';
 import "./About.scss";
 import { AppWrap } from "../../wrapper";
 
@@ -49,7 +50,7 @@ function About() {
               return <p className="p-text">{item}</p>;
             })}
           </div>
-          <a className="p-text generic_btn" target="__blank" download href="/#">
+          <a className="p-text generic_btn" target="__blank" download="SayantanMajeeResume" href={ResumeDoc}>
             Resume
           </a>
           {/* <a className="p-text generic_btn" href="./#Contact">Download</a> */}
