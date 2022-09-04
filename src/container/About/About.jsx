@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import ResumeDoc from '../../assets/Resume/Sayantan_majee_resume.pdf';
 import "./About.scss";
 import { AppWrap } from "../../wrapper";
 
