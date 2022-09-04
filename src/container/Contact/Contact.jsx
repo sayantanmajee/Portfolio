@@ -5,7 +5,7 @@ import { client } from "../../client";
 
 function Contact() {
   const contact_intro =
-    "If you’d like to chat about a project or just have question, please fill in the form below. I aim to get back within 1 days.";
+    "If you’d like to chat about a project or would like to hire me or just have question, please fill in the form below. I aim to get back within 1 days.";
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -22,8 +22,9 @@ function Contact() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     setLoading(true);
+    e.preventDefault()
 
     const contact = {
       _type: "contact",

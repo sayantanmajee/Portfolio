@@ -1,7 +1,7 @@
 import React from "react";
 import { BsLinkedin, BsGithub, BsFacebook, BsInstagram } from "react-icons/bs";
 function SocialMedia() {
-  const linkedinLink = "https://www.linkedin.com/in/sayantan-majee-55089b174/";
+  const linkedinLink = "https://www.linkedin.com/in/sayantan-majee/";
   const githubLink = "https://github.com/sayantanmajee";
   const faceBook = "https://www.facebook.com/sayantan.majee24/";
   const instagram = "https://www.instagram.com/majeesayantan/";

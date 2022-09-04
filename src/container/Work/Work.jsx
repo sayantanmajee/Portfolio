@@ -6,9 +6,9 @@ import { urlFor, client } from "../../client";
 import "./Work.scss";
 
 function Work() {
-  const catagory = ["React", "Clone App", "Frontend", "Commercial" ,"All"];
-
-  // const [catagory, setCatagory] = useState(["All"]);
+  const catagory = ["React", "Clone App", "API", "All"];
+  // let catagory = [];
+  // const [catagory, setCatagory] = useState([]);
   const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [works, setWorks] = useState([]);
@@ -26,11 +26,7 @@ function Work() {
       setWorks(data);
       setFilterWork(data);
     });
-
-    console.log(catagory);
   }, []);
-
-  
 
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
@@ -52,6 +48,8 @@ function Work() {
       <div className="app__work-header">
         <h2 className="head-text">My Work</h2>
         <div className="app__horizontal-bar" />
+        <p className="p-text work-info">Take a look at what I have worked on</p>
+
         <div className="app__work-filter">
           {catagory.map((item, index) => {
             return (

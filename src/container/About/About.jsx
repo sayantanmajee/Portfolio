@@ -1,13 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import ResumeDoc from '../../assets/Resume/Sayantan_majee_resume.pdf';
 import "./About.scss";
 import { AppWrap } from "../../wrapper";
 
 const small_description = `I'm self taught web developer with a great passion for creating beautiful websites. Powered by React VS Code and Coffee.`;
 const description = [
   "I’ve always been someone who has both a creative and a logical side. When I discovered web design in college, I realized it would be the perfect fit. I could use my creative side to design and my logical side to code.As a bonus, being both designer and developer allows me to make sure no detail is lost in translation.",
-  "Download my resume(.pdf) below!",
 ];
 const skills = [
   "HTML",
@@ -50,9 +48,9 @@ function About() {
               return <p className="p-text">{item}</p>;
             })}
           </div>
-          <a className="p-text generic_btn" target="__blank" download="SayantanMajeeResume" href={ResumeDoc}>
+          {/* <a className="p-text generic_btn" target="__blank" download="SayantanMajeeResume" href={ResumeDoc}>
             Resume
-          </a>
+          </a> */}
           {/* <a className="p-text generic_btn" href="./#Contact">Download</a> */}
         </motion.div>
 

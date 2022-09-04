@@ -1,4 +1,4 @@
-@import './index';
+@import "./index";
 
 .app {
   background-color: var(--primary-color);
@@ -23,7 +23,6 @@
   // @media screen and (max-width: 900px) {
   //   // height: auto;
   // }
-
 }
 
 .app__wrapper {
@@ -38,7 +37,6 @@
   }
 }
 
-
 .app__horizontal-bar {
   margin: 10px;
   height: 6px;
@@ -52,9 +50,6 @@
   justify-content: center;
   align-items: center;
 }
-
-
-
 
 .head-text {
   font-size: 2.75rem;
@@ -115,7 +110,6 @@
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   box-shadow: 5px 5px 10px rgb(194, 194, 194);
-  
 
   padding: 0.5rem;
 
@@ -189,7 +183,6 @@
   // justify-content: center;
   // align-items: center;
   // flex-direction: column;
-  
 
   // padding: 1rem;
 
@@ -214,7 +207,6 @@
 }
 
 @media screen and (max-width: 740px) {
-
   .app__navigation,
   .app__social {
     display: none;
@@ -224,7 +216,6 @@
     padding: 2rem;
   }
 }
-
 
 .generic_btn {
   // background-color: rgba(153,153,153,.2);
@@ -247,13 +238,25 @@
   box-shadow: 5px 5px 10px rgb(194, 194, 194);
   border-radius: 5px;
   cursor: pointer;
+
+  &:hover {
+    background-color: var(--secondary-color);
+    // background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 8px 8px 10px rgb(115, 160, 255);
+    // transform: scale(1.06);
+  }
+  &:active {
+    transform: scale(0.85);
+  }
 }
 
-.generic_btn:hover {
-  background-color: var(--secondary-color);
-  // background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-  box-shadow: 8px 8px 10px rgb(115, 160, 255);
-  // transform: scale(1.06);
-}
+// .generic_btn:hover {
+//   background-color: var(--secondary-color);
+//   // background-position: right center; /* change the direction of the change here */
+//   color: #fff;
+//   text-decoration: none;
+//   box-shadow: 8px 8px 10px rgb(115, 160, 255);
+//   // transform: scale(1.06);
+// }
