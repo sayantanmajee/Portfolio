@@ -1,5 +1,5 @@
 import React from "react";
-// import { NavigationDots, SocialMedia } from "../components";
+import { NavigationDots, SocialMedia } from "../components";
 
 //higher order component
 const AppWrap = (Component, idName, className) =>
@@ -9,9 +9,10 @@ const AppWrap = (Component, idName, className) =>
        
         <div className="app__wrapper">
           <Component />
-          {/* <NavigationDots active={idName}/> */}
+          
         </div>
         
+        {/* <NavigationDots active={idName}/> */}
       </div>
     );
   };
